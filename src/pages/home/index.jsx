@@ -11,7 +11,6 @@ const Home = () => {
         dispatch(getMovies())
     }, [])
     const FinalArray = finalmovies()
-    console.log(FinalArray)
     return (
         <>
             <Navbar />

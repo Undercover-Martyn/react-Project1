@@ -3,7 +3,8 @@ const initialState = {
     movies: [],
     searchValue : '',
     genre: 'Genre',
-    rank : ''
+    rank : '',
+    theme: '',
 }
 
 const movieSlice = createSlice({
@@ -21,9 +22,12 @@ const movieSlice = createSlice({
         },
         setRankValue: (state,action) => {
             state.rank = action.payload
+        },
+        setTheme: (state,action) => {
+            state.theme = action.payload
         }
     }
 })
 
-export  const {setMovies, setSearchValue, setGenreValue,setRankValue} = movieSlice.actions
+export  const {setMovies, setSearchValue, setGenreValue,setRankValue, setTheme} = movieSlice.actions
 export default movieSlice.reducer;

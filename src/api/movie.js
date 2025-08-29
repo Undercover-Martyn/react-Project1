@@ -3,13 +3,12 @@ import { setMovies } from "../slice/movieSlice"
 
 
 export const getMovies = () => async dispatch => {
-    const url = "/movies.json"
-    try{
-        const {data} = await axios.get(url)
-        dispatch(setMovies(data)) ;
-        return data
-    }
-    catch(err) {
-        return err
-    }
+    const url = "http://localhost:5000/api/movies"
+        try{
+            const {data} = await axios.get(url)
+            dispatch(setMovies(data)) ;
+        }
+        catch(err) {
+            return err
+        }
 } 

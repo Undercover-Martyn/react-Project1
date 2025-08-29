@@ -5,7 +5,7 @@
 
    color-scheme: light dark;
    color: rgba(255, 255, 255, 0.87);
-   background-color: white;
+   background-color: oklch(1 0.035 276);
  }
 
  @import "tailwindcss";
@@ -29,8 +29,17 @@
    }
 
    .animate-on-scroll {
-     animation: appear  ease-in;
+     animation: appear ease-in;
      animation-timeline: view();
      animation-range: entry 0 cover 25%;
    }
  }
+
+@theme {
+  --color-bg-dark: oklch(0.90 0.035 276);
+  --color-bg-light: oklch(1 0.035 276);
+  --color-text: oklch(0.15 0.1 257);
+  --color-text-muted: oklch(0.4 0.07 276);
+  --bg-dark2: oklch(0.1 0.095 340)
+
+}
